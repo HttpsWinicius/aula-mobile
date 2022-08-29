@@ -1,15 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import ComponentFlatList from './src/components/componentsFlatList.js';
+import { StyleSheet, SafeAreaView } from 'react-native';
+import { ComponenteModalize } from './src/components/ComponenteModalize';
 
 
 export default function App() {
+
+
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-        <ComponentFlatList>
-        </ComponentFlatList>
-    </View>
+    <SafeAreaView style={styles.container}>
+        <ComponenteModalize/>
+    </SafeAreaView>
   );
 }
 

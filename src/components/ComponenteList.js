@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar } from 'react-native';
-import { Card } from 'react-native-paper';
+import ComponenteCard from './ComponenteCard';
 
 const DATA = [
   {
@@ -31,18 +31,16 @@ const Item = ({ title }) => (
   </View>
 );
 
-const App = () => {
+const ComponenteList = () => {
   const renderItem = ({ item }) => (
-    <Card>
       <Item title={item.title} />
-    </Card>
   );
 
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
           data={DATA}
-          renderItem={renderItem}
+          renderItem={ComponenteCard}
           keyExtractor={item => item.id}
         />
     </SafeAreaView>
@@ -65,4 +63,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default ComponenteList;
