@@ -31,7 +31,8 @@ export const ComponenteModalize = () => {
       </TouchableOpacity>
 
       <Modalize ref={modalizeAbrirListaCartoes}>
-        <Button title= "Fechar lista de cartões" onPress={fecharListaCartoes}>
+        <Button title= "Fechar lista de cartões" 
+                onPress={fecharListaCartoes}>
         </Button>
         <ComponenteList/>
       </Modalize>
@@ -40,7 +41,8 @@ export const ComponenteModalize = () => {
         <Text>Abrir cartão principal</Text>
       </TouchableOpacity>
       <Modalize ref={modalizeAbrirCartaoPrincipal}>
-      <Button title= "Fechar cartão principal"  onPress={fecharCartaoPrincipal}>
+      <Button title= "Fechar cartão principal"  
+              onPress={fecharCartaoPrincipal}>
         </Button>
         <ComponenteCard/>
       </Modalize> 
