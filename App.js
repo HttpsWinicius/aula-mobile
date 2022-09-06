@@ -1,13 +1,19 @@
 import { StyleSheet, SafeAreaView } from 'react-native';
-import { ComponenteModalize } from './src/components/ComponenteModalize';
+import React, { useState, createContext } from "react";
+import MyContextProvider from './src/contexts/MyContext';
+import ContadorSomar from './src/components/ContadorSomar';
+import ContadorSubtrair from './src/components/ContadorSubtrair';
 
 
 export default function App() {
 
-
   return (
     <SafeAreaView style={styles.container}>
-        <ComponenteModalize/>
+      <MyContextProvider>
+        <ContadorSomar/>
+        <br/>
+        <ContadorSubtrair/>
+      </MyContextProvider>
     </SafeAreaView>
   );
 }
